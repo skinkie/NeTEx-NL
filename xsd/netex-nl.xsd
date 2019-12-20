@@ -963,10 +963,14 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="accessibilityAssessment">
-		<xsd:sequence>
-			<xsd:element name="MobilityImpairedAccess" type="xsd:boolean" minOccurs="0"/>
-			<xsd:element name="Comment" minOccurs="0"/>
-		</xsd:sequence>
+		<xsd:complexContent>
+			<xsd:extension base="versionedObject_">
+				<xsd:sequence>
+					<xsd:element name="MobilityImpairedAccess" type="xsd:boolean" minOccurs="0"/>
+					<xsd:element name="Comment" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 	<xsd:complexType name="line">
 		<xsd:complexContent>
